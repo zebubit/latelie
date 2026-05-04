@@ -1,0 +1,1871 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'Atelier Bistro — Bistrô em Uberaba | Chef Thiago Morais</title>
+  <meta name="description" content="L'Atelier Bistro — Bistrô gourmet em Uberaba, MG. Cozinha italiana, portuguesa e francesa com atenção aos frutos do mar. Chef Thiago Morais. Reservas: (34) 99251-9556.">
+  <meta name="keywords" content="bistrô uberaba, restaurante uberaba, frutos do mar uberaba, cozinha francesa uberaba, L'Atelier Bistro, Chef Thiago Morais, jantar romântico uberaba">
+  <meta name="author" content="L'Atelier Bistro">
+  <link rel="canonical" href="https://latelier.com.br/">
+  <meta name="theme-color" content="#0D0A0B">
+
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="L'Atelier Bistro — Bistrô em Uberaba">
+  <meta property="og:description" content="Bistrô gourmet em Uberaba. Cozinha italiana, portuguesa e francesa. Chef Thiago Morais. Reservas pelo WhatsApp.">
+  <meta property="og:image" content="FOTOS/hero.webp">
+  <meta property="og:url" content="https://latelier.com.br/">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="L'Atelier Bistro">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="L'Atelier Bistro — Bistrô em Uberaba">
+  <meta name="twitter:description" content="Bistrô gourmet em Uberaba. Cozinha italiana, portuguesa e francesa. Chef Thiago Morais.">
+  <meta name="twitter:image" content="FOTOS/hero.webp">
+
+  
+  
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Heebo:wght@300;400;500;600&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── VARIÁVEIS ── */
+    :root {
+      --escuro: #0D0A0B;
+      --escuro2: #1A1215;
+      --vinho: #7B1F2E;
+      --vinho-claro: #9B2D40;
+      --ouro: #C4964A;
+      --ouro-rgb: 196, 150, 74;
+      --creme: #F0E8D8;
+      --creme-dim: rgba(240,232,216,0.7);
+      --branco: #FFFFFF;
+    }
+
+    /* ── RESET ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Heebo', sans-serif;
+      background: var(--escuro);
+      color: var(--creme);
+      overflow-x: hidden;
+      padding-bottom: 0;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── GRAIN TEXTURE ── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      pointer-events: none; z-index: 9999; opacity: 0.45;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--escuro); }
+    ::-webkit-scrollbar-thumb { background: var(--ouro); border-radius: 2px; }
+
+    /* ── READ PROGRESS ── */
+    #read-progress {
+      position: fixed; top: 0; left: 0; height: 2px; width: 0%;
+      background: linear-gradient(90deg, var(--vinho), var(--ouro), var(--vinho));
+      z-index: 10000; transition: width 0.1s linear;
+    }
+
+    /* ── CURSOR CUSTOMIZADO ── */
+    .cursor-dot, .cursor-ring {
+      position: fixed; pointer-events: none; z-index: 9997;
+      transform: translate(-50%, -50%); border-radius: 50%;
+      transition: opacity 0.3s;
+    }
+    .cursor-dot { width: 6px; height: 6px; background: var(--ouro); }
+    .cursor-ring { width: 28px; height: 28px; border: 1.5px solid rgba(196,150,74,0.6); transition: transform 0.12s ease; }
+    @media (pointer: coarse) { .cursor-dot, .cursor-ring { display: none; } }
+
+    /* ── REVEAL ANIMATION ── */
+    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal:nth-child(2) { transition-delay: 0.1s; }
+    .reveal:nth-child(3) { transition-delay: 0.2s; }
+    .reveal:nth-child(4) { transition-delay: 0.3s; }
+    .reveal:nth-child(5) { transition-delay: 0.4s; }
+    .reveal:nth-child(6) { transition-delay: 0.5s; }
+
+    /* ── GOLD GRADIENT TEXT ── */
+    .gold-text {
+      background: linear-gradient(135deg, var(--ouro) 0%, #e8c07a 50%, var(--ouro) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ── SECTION TITLES ── */
+    .section-label {
+      font-family: 'Heebo', sans-serif;
+      font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--ouro); margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400; line-height: 1.15;
+      color: var(--creme); margin-bottom: 1.5rem;
+    }
+    .section-title em { font-style: italic; }
+
+    /* ── BUTTONS ── */
+    .btn-primary {
+      display: inline-block;
+      background: var(--ouro); color: var(--escuro);
+      padding: 0.85rem 2rem; border-radius: 2px;
+      font-family: 'Heebo', sans-serif;
+      font-size: 0.82rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      transition: background 0.25s, transform 0.2s;
+    }
+    .btn-primary:hover { background: #d9aa62; transform: translateY(-2px); }
+    .btn-outline {
+      display: inline-block;
+      border: 1px solid var(--ouro); color: var(--ouro);
+      background: transparent; padding: 0.85rem 2rem; border-radius: 2px;
+      font-family: 'Heebo', sans-serif;
+      font-size: 0.82rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      transition: background 0.25s, color 0.25s, transform 0.2s;
+    }
+    .btn-outline:hover { background: var(--ouro); color: var(--escuro); transform: translateY(-2px); }
+    .btn-google-review {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      border: 1px solid rgba(255,255,255,0.15); padding: 0.6rem 1.4rem;
+      border-radius: 4px; font-size: 0.8rem; color: rgba(255,255,255,0.7);
+      transition: border-color 0.25s, color 0.25s;
+    }
+    .btn-google-review:hover { border-color: var(--ouro); color: var(--ouro); }
+    .tel-link { color: inherit; }
+    .tel-link:hover { color: var(--ouro); }
+
+    /* ── STATUS BAR ── */
+    .status-bar {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .status-bar::before {
+      content: ''; width: 8px; height: 8px; border-radius: 50%;
+      background: currentColor; animation: pulse-dot 2s infinite; flex-shrink: 0;
+    }
+    .status-aberto { color: #4ade80; }
+    .status-fechado { color: #f87171; }
+    @keyframes pulse-dot { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+    /* ══════════════════════════════════════
+       NAVBAR
+    ══════════════════════════════════════ */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 1.25rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background 0.4s, backdrop-filter 0.4s, padding 0.4s;
+    }
+    #navbar.scrolled {
+      background: rgba(13,10,11,0.95);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      padding: 0.8rem 2rem;
+      border-bottom: 1px solid rgba(196,150,74,0.15);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0;
+    }
+    .nav-logo-circle {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: var(--vinho); border: 1.5px solid rgba(196,150,74,0.4);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; color: var(--ouro); font-weight: 500;
+    }
+    .nav-logo-img {
+      height: 48px; width: 48px;
+      border-radius: 50%; object-fit: cover;
+      border: 1.5px solid rgba(196,150,74,0.35);
+      display: block; flex-shrink: 0;
+    }
+    .nav-logo-text strong {
+      display: block; font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; color: var(--creme); font-weight: 500; letter-spacing: 0.05em;
+    }
+    .nav-logo-text span {
+      font-size: 0.62rem; color: var(--ouro); letter-spacing: 0.12em; text-transform: uppercase;
+    }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: rgba(240,232,216,0.8); transition: color 0.25s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+      height: 1px; background: var(--ouro); transform: scaleX(0);
+      transition: transform 0.25s;
+    }
+    .nav-links a:hover { color: var(--ouro); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-icons { display: flex; align-items: center; gap: 1rem; }
+    .nav-icons a {
+      display: flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px;
+      color: rgba(240,232,216,0.7); transition: color 0.25s;
+    }
+    .nav-icons a:hover { color: var(--ouro); }
+    .nav-cta {
+      background: var(--vinho); color: var(--creme) !important;
+      padding: 0.55rem 1.2rem; border-radius: 2px;
+      font-size: 0.72rem !important; letter-spacing: 0.1em !important;
+      font-weight: 600 !important; transition: background 0.25s !important;
+    }
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover { background: var(--vinho-claro) !important; color: var(--creme) !important; }
+
+    /* Hambúrguer */
+    .nav-hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      width: 28px; cursor: pointer; background: none; border: none; padding: 4px;
+    }
+    .nav-hamburger span {
+      display: block; height: 1.5px; background: var(--creme);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .nav-hamburger.aberto span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav-hamburger.aberto span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.aberto span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    /* Mobile menu */
+    .nav-mobile {
+      display: none; position: fixed; top: 0; right: 0; bottom: 0;
+      width: 75%; max-width: 300px;
+      background: rgba(13,10,11,0.98); backdrop-filter: blur(20px);
+      z-index: 999; padding: 5rem 2rem 2rem;
+      transform: translateX(100%); transition: transform 0.35s ease;
+      flex-direction: column; gap: 0.5rem;
+    }
+    .nav-mobile.aberto { transform: translateX(0); display: flex; }
+    .nav-mobile a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem; color: var(--creme);
+      padding: 0.75rem 0; border-bottom: 1px solid rgba(196,150,74,0.1);
+      transition: color 0.25s;
+    }
+    .nav-mobile a:hover { color: var(--ouro); }
+    .nav-overlay {
+      display: none; position: fixed; inset: 0; z-index: 998;
+      background: rgba(0,0,0,0.5);
+    }
+    .nav-overlay.aberto { display: block; }
+
+    /* ══════════════════════════════════════
+       HERO
+    ══════════════════════════════════════ */
+    #hero {
+      min-height: 100vh; position: relative; overflow: hidden;
+      display: flex; align-items: center;
+      background: var(--escuro);
+    }
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background-image: url('FOTOS/ambiente.webp');
+      background-size: cover; background-position: center 35%;
+      animation: ken-burns 18s ease-in-out infinite alternate;
+      will-change: transform;
+    }
+    @keyframes ken-burns { from { transform: scale(1); } to { transform: scale(1.12); } }
+    .hero-overlay {
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(
+        105deg,
+        rgba(13,10,11,0.88) 0%,
+        rgba(13,10,11,0.72) 50%,
+        rgba(13,10,11,0.45) 100%
+      );
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: 1200px; margin: 0 auto; padding: 8rem 2rem 4rem;
+      width: 100%;
+    }
+    .hero-eyebrow {
+      font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--ouro); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 1rem;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: block; width: 40px; height: 1px; background: var(--ouro);
+    }
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 400; line-height: 1.05;
+      color: var(--creme); max-width: 700px; margin-bottom: 1.5rem;
+    }
+    .hero-title em { font-style: italic; color: var(--ouro); }
+    .hero-sub {
+      font-size: 0.95rem; font-weight: 300;
+      color: var(--creme-dim); max-width: 480px;
+      line-height: 1.7; margin-bottom: 2rem;
+    }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .social-proof {
+      display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
+      font-size: 0.78rem; color: rgba(240,232,216,0.65);
+    }
+    .social-proof .stars { color: #fbbf24; letter-spacing: 2px; }
+    .social-proof .sep { opacity: 0.3; }
+    .hero-badge {
+      position: absolute; right: 5%; top: 38%; transform: translateY(-50%);
+      z-index: 2; width: 380px; height: 380px;
+    }
+    .hero-badge-svg {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      animation: rotate-badge 26s linear infinite;
+    }
+    @keyframes rotate-badge { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    .badge-circle-text {
+      fill: var(--ouro); font-size: 18px; font-family: 'Heebo', sans-serif;
+      letter-spacing: 5px; text-transform: uppercase;
+    }
+    .hero-badge-photo {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 285px; height: 285px; border-radius: 50%;
+      object-fit: cover; object-position: top center;
+      border: 3px solid rgba(196,150,74,0.6);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+    }
+
+    /* ══════════════════════════════════════
+       MARQUEE
+    ══════════════════════════════════════ */
+    #marquee-bar {
+      background: var(--vinho); padding: 0.85rem 0;
+      overflow: hidden; border-top: 1px solid rgba(196,150,74,0.2);
+      border-bottom: 1px solid rgba(196,150,74,0.2);
+    }
+    .marquee-track {
+      display: flex; width: max-content;
+      animation: marquee-anim 40s linear infinite;
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+    @keyframes marquee-anim { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .marquee-item {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem; font-style: italic;
+      color: rgba(240,232,216,0.9); white-space: nowrap;
+      padding: 0 2rem;
+    }
+    .marquee-dot { color: var(--ouro); padding: 0 0.5rem; }
+
+    /* ══════════════════════════════════════
+       SOBRE
+    ══════════════════════════════════════ */
+    #sobre {
+      padding: 6rem 2rem;
+      background: var(--escuro2);
+      position: relative; overflow: hidden;
+    }
+    #sobre::after {
+      content: 'L'; font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(12rem, 25vw, 20rem);
+      color: rgba(255,255,255,0.02); position: absolute;
+      bottom: -5%; right: -2%; line-height: 1;
+      pointer-events: none; user-select: none; z-index: 0;
+    }
+    .sobre-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+      position: relative; z-index: 1;
+    }
+    .sobre-fotos { display: block; }
+    .sobre-foto-main {
+      width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 4px;
+      display: block;
+    }
+    .sobre-stats {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2.5rem 0;
+    }
+    .stat-item {}
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem; font-weight: 500; color: var(--ouro);
+      line-height: 1;
+    }
+    .stat-label { font-size: 0.75rem; color: var(--creme-dim); letter-spacing: 0.05em; margin-top: 0.25rem; }
+    .sobre-assinatura {
+      font-family: 'Caveat', cursive; font-size: 1.8rem;
+      color: var(--ouro); margin: 1.5rem 0 2rem;
+      display: block;
+    }
+    .sobre-desc {
+      font-size: 0.95rem; line-height: 1.85; color: var(--creme-dim);
+      margin-bottom: 0.75rem;
+    }
+
+    /* ══════════════════════════════════════
+       CARDÁPIO
+    ══════════════════════════════════════ */
+    #cardapio {
+      padding: 6rem 2rem;
+      background: var(--escuro);
+    }
+    .cardapio-inner { max-width: 1200px; margin: 0 auto; }
+    .cardapio-header { text-align: center; margin-bottom: 3.5rem; }
+    .cardapio-header .section-title { margin-bottom: 0.75rem; }
+    .cardapio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .prato-card {
+      background: var(--escuro2); border-radius: 4px; overflow: hidden;
+      border: 1px solid rgba(196,150,74,0.08);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+    .prato-card:hover { transform: translateY(-8px); box-shadow: 0 24px 60px rgba(0,0,0,0.4); }
+    .prato-card-img {
+      width: 100%; aspect-ratio: 4/3; object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .prato-card:hover .prato-card-img { transform: scale(1.06); }
+    .prato-card-img-wrap { overflow: hidden; }
+    .prato-card-body { padding: 1.25rem 1.25rem 1.5rem; }
+    .prato-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.75rem; color: var(--ouro); letter-spacing: 0.1em;
+      margin-bottom: 0.4rem;
+    }
+    .prato-nome {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem; color: var(--creme); font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    .prato-desc { font-size: 0.82rem; color: var(--creme-dim); line-height: 1.65; margin-bottom: 1rem; }
+    .prato-cta {
+      font-size: 0.72rem; color: var(--ouro); letter-spacing: 0.08em;
+      text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.4rem;
+      transition: gap 0.2s;
+    }
+    .prato-cta:hover { gap: 0.7rem; }
+    .cardapio-footer { text-align: center; }
+
+    /* Menu du Chef highlight */
+    .menu-chef-banner {
+      background: linear-gradient(135deg, var(--vinho) 0%, #5A0F1C 100%);
+      border-radius: 4px; padding: 2.5rem;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+      align-items: center; margin-bottom: 3rem;
+      border: 1px solid rgba(196,150,74,0.2);
+      position: relative; overflow: hidden;
+    }
+    .menu-chef-banner::after {
+      content: 'Chef'; font-family: 'Cormorant Garamond', serif;
+      font-size: 8rem; color: rgba(255,255,255,0.03);
+      position: absolute; right: -1rem; bottom: -1.5rem;
+      line-height: 1; pointer-events: none;
+    }
+    .menu-chef-label {
+      font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--ouro); margin-bottom: 0.5rem;
+    }
+    .menu-chef-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 3vw, 2.5rem); color: var(--creme);
+      font-weight: 400; margin-bottom: 0.5rem;
+    }
+    .menu-chef-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem; color: var(--ouro); font-weight: 400;
+    }
+    .menu-chef-price small { font-size: 1rem; }
+    .menu-chef-items {
+      list-style: none; margin: 1rem 0;
+    }
+    .menu-chef-items li {
+      font-size: 0.85rem; color: var(--creme-dim);
+      padding: 0.3rem 0; display: flex; align-items: center; gap: 0.5rem;
+    }
+    .menu-chef-items li::before { content: '✦'; color: var(--ouro); font-size: 0.6rem; }
+
+    /* ══════════════════════════════════════
+       DIFERENCIAIS
+    ══════════════════════════════════════ */
+    #diferenciais {
+      padding: 6rem 2rem;
+      position: relative; overflow: hidden;
+    }
+    .dif-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background-image: url('FOTOS/hero.webp');
+      background-size: cover; background-position: center 40%;
+      animation: ken-burns 22s ease-in-out infinite alternate;
+    }
+    .dif-overlay {
+      position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(135deg, rgba(13,10,11,0.9) 0%, rgba(123,31,46,0.75) 100%);
+    }
+    .dif-inner {
+      position: relative; z-index: 2;
+      max-width: 1200px; margin: 0 auto;
+    }
+    .dif-header { text-align: center; margin-bottom: 3rem; }
+    .dif-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
+    }
+    .dif-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      border-radius: 4px; padding: 1.75rem;
+      transition: transform 0.35s, box-shadow 0.35s;
+    }
+    .dif-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+    .dif-icon { color: var(--ouro); margin-bottom: 1rem; }
+    .dif-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem; color: var(--creme); margin-bottom: 0.5rem;
+    }
+    .dif-desc { font-size: 0.82rem; color: var(--creme-dim); line-height: 1.65; }
+    .dif-footer { text-align: center; margin-top: 3rem; }
+
+    /* ══════════════════════════════════════
+       FORMULÁRIO
+    ══════════════════════════════════════ */
+    #reserva {
+      padding: 6rem 2rem;
+      background: linear-gradient(135deg, var(--escuro2) 0%, #120810 100%);
+    }
+    .reserva-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start;
+    }
+    .reserva-info { }
+    .reserva-benefits { list-style: none; margin: 2rem 0; }
+    .reserva-benefits li {
+      display: flex; align-items: flex-start; gap: 0.75rem;
+      padding: 0.7rem 0; border-bottom: 1px solid rgba(196,150,74,0.1);
+      font-size: 0.88rem; color: var(--creme-dim);
+    }
+    .reserva-benefits li span { color: var(--ouro); font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+    .form-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(196,150,74,0.12);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      border-radius: 4px; padding: 2.5rem;
+    }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-group label {
+      display: block; font-size: 0.72rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--ouro);
+      margin-bottom: 0.5rem;
+    }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%; background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(196,150,74,0.2); border-radius: 2px;
+      color: var(--creme); padding: 0.8rem 1rem;
+      font-family: 'Heebo', sans-serif; font-size: 0.9rem;
+      transition: border-color 0.25s;
+      outline: none;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+      border-color: var(--ouro);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(240,232,216,0.35); }
+    .form-lgpd {
+      display: flex; align-items: flex-start; gap: 0.6rem;
+      font-size: 0.78rem; color: var(--creme-dim); margin-bottom: 1.5rem;
+    }
+    .form-lgpd input[type="checkbox"] { width: auto; flex-shrink: 0; margin-top: 3px; }
+    .form-lgpd a { color: var(--ouro); }
+
+    /* Modal sucesso */
+    #modal-sucesso {
+      position: fixed; inset: 0; z-index: 5000;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(0,0,0,0.8);
+      opacity: 0; visibility: hidden;
+      transition: opacity 0.4s, visibility 0.4s;
+    }
+    #modal-sucesso.aberto { opacity: 1; visibility: visible; }
+    .modal-box {
+      background: var(--escuro2); border: 1px solid rgba(196,150,74,0.3);
+      border-radius: 4px; padding: 3rem; max-width: 420px;
+      text-align: center;
+    }
+    .modal-icon { font-size: 3rem; color: var(--ouro); margin-bottom: 1rem; }
+    .modal-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--creme); margin-bottom: 0.75rem; }
+    .modal-msg { font-size: 0.9rem; color: var(--creme-dim); line-height: 1.65; }
+    .modal-close-btn { margin-top: 1.5rem; cursor: pointer; }
+
+    /* ══════════════════════════════════════
+       DEPOIMENTOS
+    ══════════════════════════════════════ */
+    #depoimentos {
+      padding: 6rem 2rem;
+      background: var(--escuro); position: relative; overflow: hidden;
+    }
+    #depoimentos::before {
+      content: '★'; font-size: clamp(14rem, 28vw, 22rem);
+      color: rgba(196,150,74,0.03); position: absolute;
+      top: -3%; left: -2%; pointer-events: none; line-height: 1;
+    }
+    .dep-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+    .dep-header { text-align: center; margin-bottom: 3rem; }
+    .dep-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-bottom: 2.5rem; }
+    .dep-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(196,150,74,0.12);
+      border-radius: 4px; padding: 2rem;
+      transition: transform 0.35s, box-shadow 0.35s;
+    }
+    .dep-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+    .dep-stars { color: #fbbf24; font-size: 0.9rem; letter-spacing: 3px; margin-bottom: 1rem; }
+    .dep-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem; color: rgba(196,150,74,0.2);
+      line-height: 0.5; margin-bottom: 0.75rem;
+    }
+    .dep-text {
+      font-size: 0.9rem; line-height: 1.75; color: var(--creme-dim); margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+    .dep-author { display: flex; align-items: center; gap: 0.75rem; }
+    .dep-avatar {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: var(--vinho); display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--ouro);
+      flex-shrink: 0;
+    }
+    .dep-name { font-size: 0.82rem; font-weight: 600; color: var(--creme); }
+    .dep-source { font-size: 0.7rem; color: var(--creme-dim); }
+    .dep-footer { text-align: center; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* ══════════════════════════════════════
+       REDES SOCIAIS
+    ══════════════════════════════════════ */
+    #redes {
+      padding: 3.5rem 2rem;
+      background: var(--escuro2);
+      border-top: 1px solid rgba(196,150,74,0.12);
+      border-bottom: 1px solid rgba(196,150,74,0.12);
+      text-align: center;
+    }
+    .redes-inner { max-width: 700px; margin: 0 auto; }
+    .redes-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem; color: var(--creme); margin-bottom: 0.4rem;
+    }
+    .redes-title em { font-style: italic; color: var(--ouro); }
+    .redes-sub { font-size: 0.82rem; color: var(--creme-dim); margin-bottom: 2rem; }
+    .redes-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .redes-btn {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      padding: 0.85rem 2rem; border-radius: 4px;
+      font-size: 0.82rem; font-weight: 600; letter-spacing: 0.06em;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .redes-btn:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.3); }
+    .btn-ig { background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color: #fff; }
+    .btn-fb { background: #1877F2; color: #fff; }
+
+    /* ══════════════════════════════════════
+       VISITE-NOS
+    ══════════════════════════════════════ */
+    #visite {
+      padding: 6rem 2rem;
+      background: radial-gradient(ellipse at center, #1A0D12 0%, var(--escuro) 70%);
+    }
+    .visite-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: start;
+    }
+    .visite-info { }
+    .visite-item {
+      display: flex; gap: 1rem;
+      padding: 1.25rem 0; border-bottom: 1px solid rgba(196,150,74,0.1);
+    }
+    .visite-icon { color: var(--ouro); flex-shrink: 0; margin-top: 3px; }
+    .visite-item-title { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ouro); margin-bottom: 0.3rem; }
+    .visite-item-val { font-size: 0.9rem; color: var(--creme-dim); line-height: 1.6; }
+    .visite-map-wrap {
+      border-radius: 4px; overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      border: 1px solid rgba(196,150,74,0.1);
+    }
+    .visite-map-wrap iframe {
+      width: 100%; height: 380px; display: block;
+      filter: grayscale(0.3) contrast(1.05) brightness(0.9);
+    }
+    .visite-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+
+    /* ══════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════ */
+    #footer {
+      background: #080507; padding: 4rem 2rem 2rem;
+      border-top: 2px solid rgba(196,150,74,0.2);
+    }
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    .footer-brand .nav-logo { margin-bottom: 1.25rem; }
+    .footer-tagline { font-size: 0.85rem; color: var(--creme-dim); line-height: 1.7; margin-bottom: 1.5rem; }
+    .footer-social { display: flex; gap: 0.75rem; }
+    .footer-social a {
+      width: 38px; height: 38px; border-radius: 50%;
+      border: 1px solid rgba(196,150,74,0.2);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--creme-dim); font-size: 0.9rem;
+      transition: border-color 0.25s, color 0.25s;
+    }
+    .footer-social a:hover { border-color: var(--ouro); color: var(--ouro); }
+    .footer-col-title {
+      font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--ouro); margin-bottom: 1.25rem;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 0.5rem; }
+    .footer-links a { font-size: 0.82rem; color: var(--creme-dim); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--ouro); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding-top: 1.5rem; padding-bottom: 1rem;
+      display: flex; flex-direction: column; align-items: center;
+      gap: 0.5rem; text-align: center;
+    }
+    .footer-legal { font-size: 0.75rem; color: rgba(240,232,216,0.4); }
+    .footer-legal a { color: rgba(196,150,74,0.6); transition: color 0.2s; }
+    .footer-legal a:hover { color: var(--ouro); }
+    .footer-dev { font-size: 0.72rem; color: rgba(240,232,216,0.3); }
+    .footer-dev a { color: rgba(196,150,74,0.5); }
+    .footer-status { display: flex; align-items: center; gap: 0.75rem; }
+
+    /* ══════════════════════════════════════
+       BOTÕES FLUTUANTES
+    ══════════════════════════════════════ */
+    #floating-btns {
+      position: fixed; bottom: 5.5rem; right: 1.5rem; z-index: 997;
+      display: flex; flex-direction: column; align-items: flex-end; gap: 0.6rem;
+    }
+    .float-btn {
+      width: 50px; height: 50px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.35); transition: transform 0.25s;
+      position: relative;
+    }
+    .float-btn:hover { transform: scale(1.1); }
+    .float-btn-tooltip {
+      position: absolute; right: calc(100% + 10px);
+      background: rgba(13,10,11,0.95); color: var(--creme);
+      font-size: 0.75rem; white-space: nowrap; padding: 0.4rem 0.75rem;
+      border-radius: 4px; opacity: 0; pointer-events: none;
+      transition: opacity 0.2s; top: 50%; transform: translateY(-50%);
+    }
+    .float-btn:hover .float-btn-tooltip { opacity: 1; }
+    .float-btn-ig { background: linear-gradient(45deg,#f09433,#dc2743,#bc1888); color: #fff; }
+
+    /* Mini-chat WhatsApp */
+    #whats-chat { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 996; }
+    .whats-bubble {
+      width: 54px; height: 54px; border-radius: 50%;
+      background: #25D366; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3); cursor: pointer;
+      position: relative; transition: transform 0.25s;
+    }
+    .whats-bubble:hover { transform: scale(1.1); }
+    .whats-pulse {
+      width: 10px; height: 10px; background: #4ade80; border-radius: 50%;
+      position: absolute; top: 2px; right: 2px;
+      animation: pulse-green 2s infinite;
+    }
+    @keyframes pulse-green { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.4);opacity:0.7} }
+    .whats-window {
+      position: fixed; bottom: 90px; right: 1.5rem;
+      width: 300px; border-radius: 16px;
+      background: #fff; box-shadow: 0 8px 40px rgba(0,0,0,0.25);
+      overflow: hidden; z-index: 998;
+      opacity: 0; pointer-events: none; transform: translateY(20px);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    .whats-window.open { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .whats-header {
+      background: #075E54; color: #fff; padding: 1rem;
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .whats-header-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--vinho); display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--ouro);
+      flex-shrink: 0;
+    }
+    .whats-header-info { flex: 1; }
+    .whats-header-info strong { display: block; font-size: 0.9rem; }
+    .whats-header-info span { font-size: 0.75rem; opacity: 0.85; }
+    .whats-close {
+      background: none; border: none; color: rgba(255,255,255,0.7);
+      font-size: 1.4rem; cursor: pointer; line-height: 1; padding: 0;
+    }
+    .whats-body { padding: 1rem; background: #ECE5DD; }
+    .whats-msg {
+      background: #fff; border-radius: 0 12px 12px 12px;
+      padding: 0.75rem 1rem; font-size: 0.88rem; color: #333;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .whats-send {
+      display: block; background: #25D366; color: #fff;
+      text-align: center; padding: 0.9rem;
+      font-weight: 600; font-size: 0.88rem; letter-spacing: 0.03em;
+    }
+    .whats-send:hover { background: #1ebe5d; }
+
+    /* Scroll to top */
+    #scroll-top {
+      position: fixed; bottom: 5.5rem; left: 2rem;
+      width: 44px; height: 44px;
+      background: rgba(196,150,74,0.12); border: 1px solid rgba(196,150,74,0.3);
+      border-radius: 50%; cursor: pointer;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s, transform 0.3s;
+      z-index: 995; display: flex; align-items: center; justify-content: center;
+      color: var(--ouro); font-size: 1.2rem;
+    }
+    #scroll-top.visible { opacity: 1; pointer-events: auto; }
+    #scroll-top:hover { transform: translateY(-3px); background: rgba(196,150,74,0.25); }
+
+    /* ══════════════════════════════════════
+       MOBILE CTA BAR
+    ══════════════════════════════════════ */
+    .mobile-cta-bar { display: none; }
+    @media (max-width: 768px) {
+      body { padding-bottom: 80px; }
+      .mobile-cta-bar {
+        display: block; position: fixed; bottom: 0; left: 0; right: 0;
+        z-index: 990; padding: 0.75rem 1rem;
+        background: rgba(13,10,11,0.97);
+        border-top: 1px solid rgba(196,150,74,0.25);
+        box-shadow: 0 -4px 24px rgba(0,0,0,0.4);
+      }
+      .mobile-cta-btn {
+        display: block; background: var(--ouro); color: var(--escuro);
+        text-align: center; padding: 0.9rem; border-radius: 6px;
+        font-weight: 700; font-size: 0.9rem; letter-spacing: 0.06em;
+        text-decoration: none; text-transform: uppercase;
+      }
+    }
+
+    /* ══════════════════════════════════════
+       COOKIE BANNER
+    ══════════════════════════════════════ */
+    #cookie-banner {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 4000;
+      background: rgba(18,8,16,0.97); backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(196,150,74,0.2);
+      padding: 1.25rem 2rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+      flex-wrap: wrap; transform: translateY(0);
+      transition: transform 0.4s ease;
+    }
+    #cookie-banner.hidden { transform: translateY(100%); }
+    .cookie-text { font-size: 0.82rem; color: var(--creme-dim); flex: 1; min-width: 200px; }
+    .cookie-text a { color: var(--ouro); }
+    .cookie-btn {
+      background: var(--ouro); color: var(--escuro);
+      border: none; padding: 0.6rem 1.5rem; border-radius: 2px;
+      font-weight: 700; font-size: 0.8rem; cursor: pointer;
+      letter-spacing: 0.08em; text-transform: uppercase; flex-shrink: 0;
+    }
+
+    /* ══════════════════════════════════════
+       VÍDEOS
+    ══════════════════════════════════════ */
+    #videos {
+      padding: 6rem 2rem;
+      background: radial-gradient(ellipse at 30% 50%, #2A0D1A 0%, var(--escuro) 65%);
+    }
+    .videos-inner { max-width: 1200px; margin: 0 auto; }
+    .videos-header { text-align: center; margin-bottom: 3.5rem; }
+    .videos-grid {
+      display: grid; grid-template-columns: repeat(4,1fr); gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+    .video-card {
+      border-radius: 16px; overflow: hidden; position: relative;
+      border: 1px solid rgba(196,150,74,0.12);
+      aspect-ratio: 9/16;
+      background: var(--escuro2);
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s;
+      cursor: pointer;
+    }
+    .video-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+      border-color: rgba(196,150,74,0.4);
+    }
+    .video-card video {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .video-card::after {
+      display: none;
+      pointer-events: none;
+    }
+    .video-card-poster {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      transition: transform 0.6s ease;
+    }
+    .video-card:hover .video-card-poster { transform: scale(1.05); }
+    .video-card-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(13,10,11,0.1) 0%, rgba(13,10,11,0.65) 100%);
+    }
+    .video-badge {
+      position: absolute; top: 1rem; left: 1rem;
+      width: 30px; height: 30px; border-radius: 50%;
+      background: rgba(196,150,74,0.9); display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif; font-size: 0.75rem; font-weight: 600;
+      color: var(--escuro); z-index: 2;
+    }
+    .video-play {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+      width: 56px; height: 56px; border-radius: 50%;
+      background: rgba(196,150,74,0.9);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 2; transition: background 0.25s, transform 0.25s;
+    }
+    .video-card:hover .video-play { background: var(--ouro); transform: translate(-50%,-50%) scale(1.1); }
+    .video-play svg { margin-left: 3px; }
+    .video-info {
+      position: absolute; bottom: 1.25rem; left: 1.25rem; right: 1.25rem; z-index: 2;
+    }
+    .video-label {
+      font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--ouro); margin-bottom: 0.25rem;
+    }
+    .video-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; color: var(--creme);
+    }
+    .videos-footer { text-align: center; }
+
+    /* ══════════════════════════════════════
+       RESPONSIVO
+    ══════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .nav-links, .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+      .cardapio-grid { grid-template-columns: repeat(2,1fr); }
+      .dif-grid { grid-template-columns: repeat(2,1fr); }
+      .dep-grid { grid-template-columns: repeat(2,1fr); }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .menu-chef-banner { grid-template-columns: 1fr; }
+      .videos-grid { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 768px) {
+      .sobre-inner, .reserva-inner, .visite-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-badge { display: none; }
+      .dep-grid { grid-template-columns: 1fr; }
+      .videos-grid { grid-template-columns: repeat(2,1fr); }
+      #floating-btns { bottom: 9.5rem; }
+      #whats-chat { bottom: 5.5rem; }
+      #scroll-top { bottom: 9.5rem; left: 1rem; }
+      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .visite-ctas { flex-direction: column; }
+      #cookie-banner { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .cardapio-grid { grid-template-columns: 1fr; }
+      .dif-grid { grid-template-columns: 1fr; }
+      .hero-ctas { flex-direction: column; }
+      .sobre-stats { grid-template-columns: repeat(2,1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="cursor-dot" id="cursor-dot"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+
+<div id="read-progress" aria-hidden="true"></div>
+
+<button id="scroll-top" aria-label="Topo da página">&#8679;</button>
+
+<nav id="navbar" role="navigation" aria-label="Menu principal">
+  <a href="#hero" class="nav-logo" aria-label="L'Atelier Bistro">
+    <img src="FOTOS/logo.webp" alt="L'Atelier Bistro" class="nav-logo-img" width="48" height="48">
+    <div class="nav-logo-text">
+      <strong>L'Atelier</strong>
+      <span>Bistro · Chef Thiago Morais</span>
+    </div>
+  </a>
+
+  <ul class="nav-links" role="list">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#cardapio">Cardápio</a></li>
+    <li><a href="#diferenciais">Diferenciais</a></li>
+    <li><a href="#reserva">Reservas</a></li>
+    <li><a href="#visite">Localização</a></li>
+  </ul>
+
+  <div class="nav-icons">
+    <a href="https://www.instagram.com/latelier_bistro/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    </a>
+    <a href="https://wa.me/5534992519556?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20uma%20reserva." target="_blank" rel="noopener" class="nav-cta" aria-label="Reservar pelo WhatsApp">Reservar</a>
+  </div>
+
+  <button class="nav-hamburger" id="menu-toggle" aria-label="Abrir menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-overlay" id="nav-overlay"></div>
+<div class="nav-mobile" id="nav-mobile" role="navigation" aria-label="Menu mobile">
+  <a href="#sobre" class="nav-mob-link">Sobre</a>
+  <a href="#cardapio" class="nav-mob-link">Cardápio</a>
+  <a href="#diferenciais" class="nav-mob-link">Diferenciais</a>
+  <a href="#reserva" class="nav-mob-link">Reservas</a>
+  <a href="#visite" class="nav-mob-link">Localização</a>
+</div>
+
+<section id="hero" aria-label="Apresentação">
+  <div class="hero-bg" role="img" aria-label="Prato do Chef Thiago Morais"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow reveal">Bistrô Gourmet · Uberaba, MG</div>
+    <h1 class="hero-title reveal">
+      Sabor autêntico,<br><em>feito à mão.</em><br>Bem-vindo à nossa cozinha artesanal.
+    </h1>
+    <p class="hero-sub reveal">
+      Cozinha italiana, portuguesa e francesa assinada pelo Chef Thiago Morais.
+      Atenção especial aos frutos do mar em um ambiente acolhedor e sofisticado.
+    </p>
+    <div class="hero-ctas reveal">
+      <a href="https://wa.me/5534992519556?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20uma%20reserva." target="_blank" rel="noopener" class="btn-primary">Reservar mesa</a>
+      <a href="#cardapio" class="btn-outline">Ver cardápio</a>
+    </div>
+    <div class="social-proof reveal">
+      <span class="stars">★★★★★</span>
+      <span>4,7 no Google · <strong>243 avaliações</strong></span>
+      <span class="sep">·</span>
+      <span id="status-bar" class="status-bar"></span>
+    </div>
+  </div>
+  <div class="hero-badge" aria-hidden="true">
+    <svg class="hero-badge-svg" viewBox="0 0 280 280">
+      <defs>
+        <path id="badge-path" d="M140,140 m-108,0 a108,108 0 1,1 216,0 a108,108 0 1,1 -216,0"/>
+      </defs>
+      <text class="badge-circle-text">
+        <textPath href="#badge-path" startOffset="0%">CHEF · THIAGO MORAIS · BISTRÔ ·</textPath>
+      </text>
+    </svg>
+    <img src="FOTOS/chef.webp" class="hero-badge-photo" alt="Chef Thiago Morais" width="285" height="285">
+  </div>
+</section>
+
+<div id="marquee-bar" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Cozinha Francesa</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">Frutos do Mar</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">Cozinha Italiana</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">Cozinha Portuguesa</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">Coquetelaria Autoral</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">Mesas Externas</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">Menu du Chef</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">Rolha Free</span><span class="marquee-dot">✦</span>
+    
+    <span class="marquee-item">Cozinha Francesa</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">Frutos do Mar</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">Cozinha Italiana</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">Cozinha Portuguesa</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">Coquetelaria Autoral</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">Mesas Externas</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">Menu du Chef</span><span class="marquee-dot">✦</span>
+    <span class="marquee-item">Rolha Free</span><span class="marquee-dot">✦</span>
+  </div>
+</div>
+
+<section id="sobre" aria-label="Sobre o restaurante">
+  <div class="sobre-inner">
+    <div class="sobre-fotos reveal">
+      <img src="FOTOS/sobre.webp" alt="Interior do L'Atelier Bistro" class="sobre-foto-main" width="560" height="420" loading="lazy">
+    </div>
+    <div>
+      <p class="section-label reveal">Nossa história</p>
+      <h2 class="section-title reveal">Um bistrô com alma <em>europeia</em> em Uberaba</h2>
+      <span class="sobre-assinatura reveal">Chef Thiago Morais</span>
+      <p class="sobre-desc reveal">
+        Todos são bem-vindos ao L'Atelier Bistrô, que chegou em Uberaba com uma proposta
+        totalmente diferente. Nossa cozinha concentra os sabores da Itália, Portugal e França,
+        com atenção especial aos frutos do mar.
+      </p>
+      <p class="sobre-desc reveal">
+        Cada prato é criado com carinho, técnica e ingredientes selecionados, transmitindo
+        simpatia, conforto e uma experiência gastronômica que vai além do sabor.
+      </p>
+      <div class="sobre-stats reveal">
+        <div class="stat-item">
+          <div class="stat-num gold-text" data-count="4.7" data-decimals="1" data-suffix="">4,7</div>
+          <div class="stat-label">Estrelas no Google</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num gold-text" data-count="243" data-decimals="0" data-suffix="">243</div>
+          <div class="stat-label">Avaliações</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num gold-text" data-count="5" data-decimals="0" data-suffix="/5">5/5</div>
+          <div class="stat-label">No Facebook</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num gold-text" data-count="3" data-decimals="0" data-suffix="">3</div>
+          <div class="stat-label">Cozinhas autorais</div>
+        </div>
+      </div>
+      <a href="#cardapio" class="btn-outline reveal">Conheça nosso cardápio</a>
+    </div>
+  </div>
+</section>
+
+<section id="cardapio" aria-label="Cardápio">
+  <div class="cardapio-inner">
+    <div class="cardapio-header">
+      <p class="section-label reveal">Nossos pratos</p>
+      <h2 class="section-title reveal">Experiências que <em>ficam na memória</em></h2>
+    </div>
+
+    
+    <div class="menu-chef-banner reveal">
+      <div>
+        <p class="menu-chef-label">Oferta especial</p>
+        <h3 class="menu-chef-title">Menu du Chef</h3>
+        <p class="menu-chef-price"><small>R$</small>129 <small style="font-size:1rem;opacity:.7">por pessoa</small></p>
+        <ul class="menu-chef-items">
+          <li>Entrada da casa</li>
+          <li>Prato principal à sua escolha</li>
+          <li>Sobremesa artesanal</li>
+          <li>Rolha Free: traga seu vinho</li>
+        </ul>
+        <a href="https://wa.me/5534992519556?text=Ol%C3%A1!%20Gostaria%20de%20reservar%20o%20Menu%20du%20Chef%20para%20R%24129%20por%20pessoa." target="_blank" rel="noopener" class="btn-primary">Reservar Menu du Chef</a>
+      </div>
+      <img src="FOTOS/menu-chef.webp" alt="Menu du Chef — L'Atelier Bistro" width="480" height="640" loading="lazy" style="width:100%;max-height:360px;object-fit:contain;background:#3A0D16;border-radius:4px;">
+    </div>
+
+    <div class="cardapio-grid">
+      <div class="prato-card reveal">
+        <div class="prato-card-img-wrap">
+          <img src="FOTOS/prato-01.webp" alt="Medalhão na Massa Fresca" class="prato-card-img" width="400" height="300" loading="lazy">
+        </div>
+        <div class="prato-card-body">
+          <p class="prato-num">01</p>
+          <h3 class="prato-nome">Medalhão na Massa Fresca</h3>
+          <p class="prato-desc">Medalhão de filé grelhado sobre tagliatelle al dente com mix de cogumelos Paris e molho rôti reduzido.</p>
+          <a href="https://wa.me/5534992519556?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Medalhão%20na%20Massa%20Fresca." target="_blank" rel="noopener" class="prato-cta">Perguntar sobre este prato ›</a>
+        </div>
+      </div>
+      <div class="prato-card reveal">
+        <div class="prato-card-img-wrap">
+          <img src="FOTOS/prato-02.webp" alt="Filé Benedict" class="prato-card-img" width="400" height="300" loading="lazy">
+        </div>
+        <div class="prato-card-body">
+          <p class="prato-num">02</p>
+          <h3 class="prato-nome">Filé Benedict</h3>
+          <p class="prato-desc">Medalhão de filé sobre risoto cremoso, ovo pochê com molho hollandaise e bacon crocante. O prato mais fotografado da casa.</p>
+          <a href="https://wa.me/5534992519556?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Filé%20Benedict." target="_blank" rel="noopener" class="prato-cta">Perguntar sobre este prato ›</a>
+        </div>
+      </div>
+      <div class="prato-card reveal">
+        <div class="prato-card-img-wrap">
+          <img src="FOTOS/prato-03.webp" alt="Risoto de Camarão" class="prato-card-img" width="400" height="300" loading="lazy">
+        </div>
+        <div class="prato-card-body">
+          <p class="prato-num">03</p>
+          <h3 class="prato-nome">Risoto de Camarão</h3>
+          <p class="prato-desc">Risoto cremoso ao bisque de camarão com camarões inteiros grelhados, um clássico da cozinha italiana da casa.</p>
+          <a href="https://wa.me/5534992519556?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Risoto%20de%20Camarão." target="_blank" rel="noopener" class="prato-cta">Perguntar sobre este prato ›</a>
+        </div>
+      </div>
+      <div class="prato-card reveal">
+        <div class="prato-card-img-wrap">
+          <img src="FOTOS/prato-04.webp" alt="Peixe Grelhado Premium" class="prato-card-img" width="400" height="300" loading="lazy">
+        </div>
+        <div class="prato-card-body">
+          <p class="prato-num">04</p>
+          <h3 class="prato-nome">Peixe Grelhado Premium</h3>
+          <p class="prato-desc">Filé de peixe branco grelhado sobre purê sedoso, cogumelos salteados e redução de hibisco.</p>
+          <a href="https://wa.me/5534992519556?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Peixe%20Grelhado." target="_blank" rel="noopener" class="prato-cta">Perguntar sobre este prato ›</a>
+        </div>
+      </div>
+      <div class="prato-card reveal">
+        <div class="prato-card-img-wrap">
+          <img src="FOTOS/prato-05.webp" alt="Folhado ao Molho de Maracujá" class="prato-card-img" width="400" height="300" loading="lazy">
+        </div>
+        <div class="prato-card-body">
+          <p class="prato-num">05</p>
+          <h3 class="prato-nome">Folhado ao Molho Maracujá</h3>
+          <p class="prato-desc">Folhado crocante recheado com frango especiado, acompanhado de molho de maracujá fresco e mix de folhas.</p>
+          <a href="https://wa.me/5534992519556?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Folhado%20ao%20Molho%20de%20Maracujá." target="_blank" rel="noopener" class="prato-cta">Perguntar sobre este prato ›</a>
+        </div>
+      </div>
+      <div class="prato-card reveal">
+        <div class="prato-card-img-wrap">
+          <img src="FOTOS/prato-06.webp" alt="Risoto de Cogumelos" class="prato-card-img" width="400" height="300" loading="lazy">
+        </div>
+        <div class="prato-card-body">
+          <p class="prato-num">06</p>
+          <h3 class="prato-nome">Risoto de Cogumelos</h3>
+          <p class="prato-desc">Risoto cremoso com cogumelos da estação, parmesão envelhecido e toque de trufa, clássico da cozinha italiana.</p>
+          <a href="https://wa.me/5534992519556?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Risoto%20de%20Cogumelos." target="_blank" rel="noopener" class="prato-cta">Perguntar sobre este prato ›</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cardapio-footer reveal">
+      <a href="https://wa.me/5534992519556?text=Ol%C3%A1!%20Gostaria%20de%20ver%20o%20cardápio%20completo." target="_blank" rel="noopener" class="btn-outline">Ver cardápio completo via WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section id="diferenciais" aria-label="Diferenciais">
+  <div class="dif-bg" role="img" aria-label="Ambiente do L'Atelier Bistro"></div>
+  <div class="dif-overlay"></div>
+  <div class="dif-inner">
+    <div class="dif-header">
+      <p class="section-label reveal">Por que nos escolher</p>
+      <h2 class="section-title reveal">O que torna cada visita <em>inesquecível</em></h2>
+    </div>
+    <div class="dif-grid">
+      <div class="dif-card reveal">
+        <div class="dif-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <h3 class="dif-title">Chef Assinatura</h3>
+        <p class="dif-desc">Cada prato é criado e supervisionado pelo Chef Thiago Morais, com técnica francesa e alma brasileira.</p>
+      </div>
+      <div class="dif-card reveal">
+        <div class="dif-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h3 class="dif-title">Rolha Free</h3>
+        <p class="dif-desc">Traga seu vinho favorito sem pagar taxa de rolha. Você traz, a gente cuida do resto.</p>
+      </div>
+      <div class="dif-card reveal">
+        <div class="dif-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 class="dif-title">Ambiente Acolhedor</h3>
+        <p class="dif-desc">Mesas externas e salão intimista para até 40 pessoas, perfeito para jantares românticos, aniversários e confraternizações.</p>
+      </div>
+      <div class="dif-card reveal">
+        <div class="dif-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 class="dif-title">Localização Especial</h3>
+        <p class="dif-desc">No bairro Mercês, Uberaba, em um casarão charmoso com arquitetura que complementa a experiência gastronômica.</p>
+      </div>
+    </div>
+    <div class="dif-footer">
+      <a href="#reserva" class="btn-primary reveal">Fazer uma reserva</a>
+    </div>
+  </div>
+</section>
+
+<section id="reserva" aria-label="Fazer reserva">
+  <div class="reserva-inner">
+    <div class="reserva-info">
+      <p class="section-label reveal">Reservas</p>
+      <h2 class="section-title reveal">Reserve sua <em>mesa especial</em></h2>
+      <p style="font-size:.9rem;color:var(--creme-dim);line-height:1.7;" class="reveal">
+        Garanta sua reserva e chegue para uma noite inesquecível. Aceitamos grupos, jantares
+        românticos e comemorações especiais.
+      </p>
+      <ul class="reserva-benefits reveal">
+        <li><span>✦</span> Confirmação imediata via WhatsApp</li>
+        <li><span>✦</span> Menu du Chef disponível com reserva antecipada</li>
+        <li><span>✦</span> Rolha Free: traga seu vinho</li>
+        <li><span>✦</span> Mesas externas disponíveis mediante solicitação</li>
+        <li><span>✦</span> Cardápio especial para ocasiões comemorativas</li>
+      </ul>
+    </div>
+    <div class="form-card reveal">
+      <form id="form-reserva" novalidate>
+        <div class="form-group">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+        </div>
+        <div class="form-group">
+          <label for="whatsapp">WhatsApp</label>
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder="(34) 9 9999-9999" required>
+        </div>
+        <div class="form-group">
+          <label for="ocasiao">Ocasião / Data desejada</label>
+          <input type="text" id="ocasiao" name="ocasiao" placeholder="Ex: Aniversário, 15/05 às 20h">
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Observações</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Número de pessoas, alguma necessidade especial..."></textarea>
+        </div>
+        <div class="form-lgpd">
+          <input type="checkbox" id="lgpd" name="lgpd" required>
+          <label for="lgpd">Li e aceito a <a href="politica-de-privacidade.html">Política de Privacidade</a> e os <a href="termos-de-uso.html">Termos de Uso</a>.</label>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;text-align:center;border:none;cursor:pointer;">Enviar reserva pelo WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div id="modal-sucesso" role="dialog" aria-modal="true" aria-label="Reserva enviada">
+  <div class="modal-box">
+    <div class="modal-icon">✦</div>
+    <h3 class="modal-title">Reserva enviada!</h3>
+    <p class="modal-msg">Você será redirecionado ao WhatsApp para confirmar com nossa equipe. Até breve!</p>
+    <button class="btn-primary modal-close-btn" id="modal-close">Fechar</button>
+  </div>
+</div>
+
+<section id="depoimentos" aria-label="Depoimentos de clientes">
+  <div class="dep-inner">
+    <div class="dep-header">
+      <p class="section-label reveal">O que dizem nossos clientes</p>
+      <h2 class="section-title reveal">Experiências que <em>falam por si</em></h2>
+    </div>
+    <div class="dep-grid">
+      <div class="dep-card reveal">
+        <div class="dep-stars">★★★★★</div>
+        <div class="dep-quote">"</div>
+        <p class="dep-text">Excelente ambiente, ótimo atendimento, comida deliciosa, preço justo, parabéns.</p>
+        <div class="dep-author">
+          <div class="dep-avatar">F</div>
+          <div>
+            <div class="dep-name">Fabio Braga</div>
+            <div class="dep-source">Avaliação Google</div>
+          </div>
+        </div>
+      </div>
+      <div class="dep-card reveal">
+        <div class="dep-stars">★★★★★</div>
+        <div class="dep-quote">"</div>
+        <p class="dep-text">Parabéns pelo espaço, atendimento e carinho no preparo de cada prato. Um lugar especial em Uberaba.</p>
+        <div class="dep-author">
+          <div class="dep-avatar">R</div>
+          <div>
+            <div class="dep-name">Rodrigo Bernardes</div>
+            <div class="dep-source">Avaliação Google</div>
+          </div>
+        </div>
+      </div>
+      <div class="dep-card reveal">
+        <div class="dep-stars">★★★★★</div>
+        <div class="dep-quote">"</div>
+        <p class="dep-text">Ambiente lindo, pratos lindamente apresentados e com sabores incríveis. Voltarei com certeza!</p>
+        <div class="dep-author">
+          <div class="dep-avatar">C</div>
+          <div>
+            <div class="dep-name">Cliente Facebook</div>
+            <div class="dep-source">5/5 · Facebook Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dep-footer reveal">
+      <a href="https://search.google.com/local/reviews?placeid=ChIJN1t_tDeuEmsRUsdiY1GsfLs" target="_blank" rel="noopener" class="btn-google-review">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        Avaliar no Google
+      </a>
+      <a href="https://www.google.com/maps/search/L'Atelier+Bistro+Uberaba" target="_blank" rel="noopener" class="btn-outline" style="font-size:.75rem">Ver todas as avaliações</a>
+    </div>
+  </div>
+</section>
+
+<section id="redes" aria-label="Redes sociais">
+  <div class="redes-inner">
+    <h2 class="redes-title reveal">Nos siga nas <em>redes sociais</em></h2>
+    <p class="redes-sub reveal">Novidades, promoções e bastidores da cozinha todos os dias</p>
+    <div class="redes-btns reveal">
+      <a href="https://www.instagram.com/latelier_bistro/" target="_blank" rel="noopener" class="redes-btn btn-ig">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        @latelier_bistro
+      </a>
+      <a href="https://www.facebook.com/latelierrbistro/" target="_blank" rel="noopener" class="redes-btn btn-fb">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        L'Atelier Bistro
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="videos" aria-label="Nossos vídeos no Instagram">
+  <div class="videos-inner">
+    <div class="videos-header">
+      <p class="section-label reveal">Bastidores e momentos</p>
+      <h2 class="section-title reveal">A cozinha em <em>movimento</em></h2>
+    </div>
+    <div class="videos-grid">
+
+      <a href="https://www.instagram.com/reel/DAlx2IXp5ct/" target="_blank" rel="noopener" class="video-card reveal" aria-label="Ver vídeo no Instagram">
+        <div class="video-card-poster" style="background-image:url('FOTOS/prato-01.webp')"></div>
+        <div class="video-card-overlay"></div>
+        <div class="video-badge">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+        <div class="video-play" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--escuro)"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+        <div class="video-info">
+          <p class="video-label">Reel</p>
+          <p class="video-title">Bastidores da cozinha</p>
+        </div>
+      </a>
+
+      <a href="https://www.instagram.com/reel/DXKq12xkkq-/" target="_blank" rel="noopener" class="video-card reveal" aria-label="Ver vídeo no Instagram">
+        <div class="video-card-poster" style="background-image:url('FOTOS/chef1.webp')"></div>
+        <div class="video-card-overlay"></div>
+        <div class="video-badge">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+        <div class="video-play" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--escuro)"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+        <div class="video-info">
+          <p class="video-label">Reel</p>
+          <p class="video-title">Chef Thiago em ação</p>
+        </div>
+      </a>
+
+      <a href="https://www.instagram.com/p/DX2M9hey2Ah/" target="_blank" rel="noopener" class="video-card reveal" aria-label="Ver vídeo no Instagram">
+        <div class="video-card-poster" style="background-image:url('FOTOS/ambiente.webp')"></div>
+        <div class="video-card-overlay"></div>
+        <div class="video-badge">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+        <div class="video-play" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--escuro)"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+        <div class="video-info">
+          <p class="video-label">Post</p>
+          <p class="video-title">Momentos do bistrô</p>
+        </div>
+      </a>
+
+      <a href="https://www.instagram.com/p/DXsOejmEo1R/" target="_blank" rel="noopener" class="video-card reveal" aria-label="Ver vídeo no Instagram">
+        <div class="video-card-poster" style="background-image:url('FOTOS/prato-04.webp')"></div>
+        <div class="video-card-overlay"></div>
+        <div class="video-badge">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+        <div class="video-play" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--escuro)"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+        <div class="video-info">
+          <p class="video-label">Post</p>
+          <p class="video-title">Prato do dia</p>
+        </div>
+      </a>
+
+    </div>
+    <div class="videos-footer reveal">
+      <a href="https://www.instagram.com/latelier_bistro/" target="_blank" rel="noopener" class="btn-outline">Ver todos os vídeos no Instagram</a>
+    </div>
+  </div>
+</section>
+
+<section id="visite" aria-label="Localização e contato">
+  <div class="visite-inner">
+    <div class="visite-info">
+      <p class="section-label reveal">Venha nos visitar</p>
+      <h2 class="section-title reveal">Como nos <em>encontrar</em></h2>
+      <div class="visite-item reveal">
+        <div class="visite-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="visite-item-title">Endereço</div>
+          <div class="visite-item-val">R. Irmão Afonso, 265, Mercês<br>Uberaba, MG, 38060-360</div>
+        </div>
+      </div>
+      <div class="visite-item reveal">
+        <div class="visite-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.35 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 15.13z"/></svg>
+        </div>
+        <div>
+          <div class="visite-item-title">Telefone / WhatsApp</div>
+          <div class="visite-item-val">
+            <a href="tel:+5534992519556" class="tel-link">(34) 99251-9556</a>
+          </div>
+        </div>
+      </div>
+      <div class="visite-item reveal">
+        <div class="visite-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="visite-item-title">Horário de funcionamento</div>
+          <div class="visite-item-val">
+            Terça a Quinta: 19h00 – 23h00<br>
+            Sexta e Sábado: 19h00 – 00h00<br>
+            <span id="status-footer" class="status-bar" style="margin-top:.4rem;display:inline-flex;"></span>
+          </div>
+        </div>
+      </div>
+      <div class="visite-ctas reveal">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=R.+Irmão+Afonso,+265,+Uberaba,+MG" target="_blank" rel="noopener" class="btn-primary">Abrir no Google Maps</a>
+        <a href="tel:+5534992519556" class="btn-outline">Ligar agora</a>
+      </div>
+    </div>
+    <div class="visite-map-wrap reveal">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.5462!2d-47.93287!3d-19.75318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ae5b33e9f47a5f%3A0x8c7f2d4d01c3f9f0!2sR.+Irm%C3%A3o+Afonso%2C+265+-+Merc%C3%AAs%2C+Uberaba+-+MG!5e0!3m2!1spt-BR!2sbr!4v1699900000000!5m2!1spt-BR!2sbr"
+        loading="lazy" title="Localização L'Atelier Bistro no Google Maps"
+        referrerpolicy="no-referrer-when-downgrade"
+        aria-label="Mapa do L'Atelier Bistro"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="nav-logo" style="margin-bottom:1rem;">
+        <img src="FOTOS/logo.webp" alt="L'Atelier Bistro" class="nav-logo-img" width="48" height="48">
+        <div class="nav-logo-text">
+          <strong>L'Atelier</strong>
+          <span>Bistro · Chef Thiago Morais</span>
+        </div>
+      </div>
+      <p class="footer-tagline">
+        Bistrô gourmet com sabores da Itália, Portugal e França.<br>
+        R. Irmão Afonso, 265, Mercês, Uberaba, MG, 38060-360<br>
+        <a href="tel:+5534992519556" class="tel-link" style="color:var(--ouro);">(34) 99251-9556</a>
+      </p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/latelier_bistro/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.facebook.com/latelierrbistro/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://wa.me/5534992519556" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.385.69 4.61 1.877 6.488L.057 24l5.65-1.797A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.806 9.806 0 0 1-5.031-1.388l-.36-.214-3.733 1.187 1.24-3.63-.235-.372A9.795 9.795 0 0 1 2.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <p class="footer-col-title">Menu</p>
+      <ul class="footer-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#cardapio">Cardápio</a></li>
+        <li><a href="#diferenciais">Diferenciais</a></li>
+        <li><a href="#reserva">Reservas</a></li>
+        <li><a href="#visite">Localização</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">Horários</p>
+      <ul class="footer-links">
+        <li><a href="#">Ter – Qui: 19h – 23h</a></li>
+        <li><a href="#">Sex – Sáb: 19h – 00h</a></li>
+        <li><a href="#">Dom – Seg: Fechado</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">Legal</p>
+      <ul class="footer-links">
+        <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
+        <li><a href="termos-de-uso.html">Termos de Uso</a></li>
+      </ul>
+      <div style="margin-top:1.5rem;">
+        <a href="https://search.google.com/local/reviews?placeid=ChIJN1t_tDeuEmsRUsdiY1GsfLs" target="_blank" rel="noopener" class="btn-google-review" style="font-size:.75rem;padding:.5rem 1rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          Avaliar no Google
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-legal">
+      © 2025 L'Atelier Bistro. Todos os direitos reservados. ·
+      <a href="politica-de-privacidade.html">Privacidade</a> ·
+      <a href="termos-de-uso.html">Termos</a>
+    </p>
+    <p class="footer-dev">Desenvolvido por <a href="https://zebubit.com.br" target="_blank" rel="noopener">Zebubit Assessoria</a></p>
+  </div>
+</footer>
+
+<div id="floating-btns">
+  <a href="https://www.instagram.com/latelier_bistro/" target="_blank" rel="noopener" class="float-btn float-btn-ig" aria-label="Instagram">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    <span class="float-btn-tooltip">Seguir no Instagram</span>
+  </a>
+</div>
+
+<div id="whats-chat">
+  <div class="whats-window" id="whats-window">
+    <div class="whats-header">
+      <div class="whats-header-avatar">L</div>
+      <div class="whats-header-info">
+        <strong>L'Atelier Bistro</strong>
+        <span>Online agora</span>
+      </div>
+      <button class="whats-close" id="whats-close" aria-label="Fechar chat">×</button>
+    </div>
+    <div class="whats-body">
+      <div class="whats-msg">Olá! Gostaria de fazer uma reserva ou tirar uma dúvida? Fale com a gente!</div>
+    </div>
+    <a class="whats-send" href="https://wa.me/5534992519556?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20a%20equipe." target="_blank" rel="noopener">Iniciar conversa no WhatsApp</a>
+  </div>
+  <div class="whats-bubble" id="whats-toggle" role="button" aria-label="Abrir chat WhatsApp" tabindex="0">
+    <span class="whats-pulse"></span>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.385.69 4.61 1.877 6.488L.057 24l5.65-1.797A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.806 9.806 0 0 1-5.031-1.388l-.36-.214-3.733 1.187 1.24-3.63-.235-.372A9.795 9.795 0 0 1 2.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+  </div>
+</div>
+
+<div class="mobile-cta-bar" id="mobile-cta-bar">
+  <a href="https://wa.me/5534992519556?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20uma%20reserva." target="_blank" rel="noopener" class="mobile-cta-btn">Reservar pelo WhatsApp</a>
+</div>
+
+<div id="cookie-banner" role="complementary" aria-label="Aviso de cookies">
+  <p class="cookie-text">
+    Usamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa
+    <a href="politica-de-privacidade.html">Política de Privacidade</a>.
+  </p>
+  <button class="cookie-btn" id="cookie-aceitar">Entendido</button>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "L'Atelier Bistro",
+  "description": "Bistrô gourmet em Uberaba com cozinha italiana, portuguesa e francesa. Chef Thiago Morais. Especialidade em frutos do mar.",
+  "url": "https://latelier.com.br",
+  "telephone": "+5534992519556",
+  "image": "FOTOS/hero.webp",
+  "servesCuisine": ["Francesa", "Italiana", "Portuguesa", "Frutos do Mar"],
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "R. Irmão Afonso, 265",
+    "addressLocality": "Uberaba",
+    "addressRegion": "MG",
+    "postalCode": "38060-360",
+    "addressCountry": "BR"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "243",
+    "bestRating": "5"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday","Wednesday","Thursday"],
+      "opens": "19:00",
+      "closes": "23:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Friday","Saturday"],
+      "opens": "19:00",
+      "closes": "00:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/latelier_bistro/",
+    "https://www.facebook.com/latelierrbistro/"
+  ]
+}
+</script>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ── Read Progress ── */
+  window.addEventListener('scroll', () => {
+    const p = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+    document.getElementById('read-progress').style.width = (p * 100) + '%';
+  }, { passive: true });
+
+  /* ── Navbar scroll ── */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+  }, { passive: true });
+
+  /* ── Mobile menu ── */
+  const toggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('nav-mobile');
+  const overlay = document.getElementById('nav-overlay');
+  const mobileCta = document.getElementById('mobile-cta-bar');
+
+  function openMenu() {
+    toggle.classList.add('aberto');
+    mobileMenu.classList.add('aberto');
+    overlay.classList.add('aberto');
+    if (mobileCta) mobileCta.style.display = 'none';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMenu() {
+    toggle.classList.remove('aberto');
+    mobileMenu.classList.remove('aberto');
+    overlay.classList.remove('aberto');
+    if (mobileCta && window.innerWidth <= 768) mobileCta.style.display = 'block';
+    document.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', () => mobileMenu.classList.contains('aberto') ? closeMenu() : openMenu());
+  overlay.addEventListener('click', closeMenu);
+  document.querySelectorAll('.nav-mob-link').forEach(a => a.addEventListener('click', closeMenu));
+
+  /* ── IntersectionObserver reveal ── */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '-60px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  /* ── Contador animado ── */
+  const countObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      countObserver.unobserve(e.target);
+      const el = e.target;
+      const target = parseFloat(el.dataset.count);
+      const decimals = parseInt(el.dataset.decimals) || 0;
+      const suffix = el.dataset.suffix || '';
+      const duration = 1800;
+      const start = performance.now();
+      const update = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const value = eased * target;
+        el.textContent = value.toFixed(decimals).replace('.', ',') + suffix;
+        if (progress < 1) requestAnimationFrame(update);
+      };
+      requestAnimationFrame(update);
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('.stat-num[data-count]').forEach(el => countObserver.observe(el));
+
+  /* ── Scroll to top ── */
+  const scrollTopBtn = document.getElementById('scroll-top');
+  window.addEventListener('scroll', () => {
+    scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+  scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  /* ── Cursor ── */
+  const dot = document.getElementById('cursor-dot');
+  const ring = document.getElementById('cursor-ring');
+  let rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => {
+    dot.style.left = e.clientX + 'px';
+    dot.style.top = e.clientY + 'px';
+    requestAnimationFrame(() => {
+      rx += (e.clientX - rx) * 0.15;
+      ry += (e.clientY - ry) * 0.15;
+      ring.style.left = rx + 'px';
+      ring.style.top = ry + 'px';
+    });
+  });
+
+  /* ── Máscara telefone ── */
+  const whaInput = document.getElementById('whatsapp');
+  if (whaInput) {
+    whaInput.addEventListener('input', function() {
+      let v = this.value.replace(/\D/g, '').substring(0, 11);
+      if (v.length > 2) v = '(' + v.substring(0,2) + ') ' + v.substring(2);
+      if (v.length > 10) v = v.substring(0,10) + '-' + v.substring(10);
+      this.value = v;
+    });
+  }
+
+  /* ── Formulário ── */
+  const form = document.getElementById('form-reserva');
+  const modal = document.getElementById('modal-sucesso');
+  const modalClose = document.getElementById('modal-close');
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value.trim();
+      const tel  = document.getElementById('whatsapp').value.trim();
+      const ocas = document.getElementById('ocasiao').value.trim();
+      const msg  = document.getElementById('mensagem').value.trim();
+      const lgpd = document.getElementById('lgpd').checked;
+      if (!nome || !tel || !lgpd) { alert('Preencha nome, WhatsApp e aceite os termos.'); return; }
+      const texto = `✨ *Reserva pelo Site: L'Atelier Bistro*\n\nOlá! Vim pelo site e gostaria de fazer uma reserva.\n\n👤 *Nome:* ${nome}\n📱 *WhatsApp:* ${tel}${ocas ? '\n🎉 *Ocasião:* ' + ocas : ''}${msg ? '\n📝 *Detalhes:* ' + msg : ''}\n\n_Mensagem enviada pelo formulário do site._`;
+      const url = 'https://wa.me/5534992519556?text=' + encodeURIComponent(texto);
+      modal.classList.add('aberto');
+      setTimeout(() => { window.open(url, '_blank'); }, 600);
+    });
+  }
+
+  if (modalClose) {
+    modalClose.addEventListener('click', () => modal.classList.remove('aberto'));
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') modal.classList.remove('aberto'); });
+  modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('aberto'); });
+
+  /* ── WhatsApp Mini-chat ── */
+  const wBtn = document.getElementById('whats-toggle');
+  const wWin = document.getElementById('whats-window');
+  const wClose = document.getElementById('whats-close');
+  if (wBtn) {
+    wBtn.addEventListener('click', () => wWin.classList.toggle('open'));
+    wBtn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') wWin.classList.toggle('open'); });
+  }
+  if (wClose) wClose.addEventListener('click', () => wWin.classList.remove('open'));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && wWin) wWin.classList.remove('open'); });
+
+  /* ── Cookie Banner ── */
+  const cookieBanner = document.getElementById('cookie-banner');
+  if (localStorage.getItem('cookie_aceito')) {
+    cookieBanner.classList.add('hidden');
+  }
+  document.getElementById('cookie-aceitar').addEventListener('click', () => {
+    localStorage.setItem('cookie_aceito', '1');
+    cookieBanner.classList.add('hidden');
+  });
+
+  /* ── "Aberto agora" dinâmico ── */
+  (function() {
+    const now = new Date();
+    const day = now.getDay(); // 0=dom 1=seg 2=ter 3=qua 4=qui 5=sex 6=sab
+    const h = now.getHours() * 60 + now.getMinutes();
+    const horarios = [
+      { dias:[2,3,4], abre:19*60, fecha:23*60 },
+      { dias:[5,6],   abre:19*60, fecha:24*60 }
+    ];
+    const aberto = horarios.some(r => r.dias.includes(day) && h >= r.abre && h < r.fecha);
+    ['status-bar', 'status-footer'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.className = 'status-bar ' + (aberto ? 'status-aberto' : 'status-fechado');
+        el.textContent = aberto ? 'Aberto agora' : 'Fechado no momento';
+      }
+    });
+  })();
+
+})();
+</script>
+
+</body>
+</html>
